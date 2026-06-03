@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Catechism App</title>
+  <meta name="description" content="Get help with the Catechism iOS app — frequently asked questions and contact information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ivory:   #F9F5F0;
+      --cream:   #F0EAE0;
+      --gold:    #B8860B;
+      --navy:    #1B2A4A;
+      --brown:   #5C4033;
+      --text:    #2C2416;
+      --muted:   #7A6A58;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--ivory);
+      color: var(--text);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--ivory);
+      border-bottom: 1px solid rgba(92,64,51,.15);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-brand {
+      font-size: 1.3rem; font-weight: 600; letter-spacing: .04em;
+      color: var(--navy); text-decoration: none;
+    }
+    .nav-link {
+      font-size: .95rem; color: var(--muted); text-decoration: none;
+    }
+    .nav-link:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 700px; margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 3.5rem);
+      font-weight: 500; font-style: italic;
+      color: var(--navy); margin-bottom: 1rem;
+    }
+    .hero p { font-size: 1.15rem; color: var(--brown); }
+
+    /* ── FAQ ── */
+    .faq-section {
+      max-width: 700px; margin: 0 auto;
+      padding: 2rem 2rem 5rem;
+    }
+    .faq-section h2 {
+      font-size: 1.7rem; font-weight: 500; font-style: italic;
+      color: var(--navy); margin-bottom: 1.75rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid rgba(92,64,51,.15);
+    }
+
+    details {
+      border-bottom: 1px solid rgba(92,64,51,.12);
+      padding: 1.1rem 0;
+    }
+    summary {
+      cursor: pointer;
+      font-size: 1.1rem; font-weight: 600; color: var(--navy);
+      list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1rem;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.4rem; color: var(--gold); flex-shrink: 0;
+      font-weight: 400; line-height: 1;
+    }
+    details[open] summary::after { content: '−'; }
+    .faq-body {
+      padding-top: .85rem;
+      font-size: 1rem; color: var(--muted);
+      line-height: 1.65;
+    }
+    .faq-body a { color: var(--gold); }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      background: var(--cream);
+      border-top: 1px solid rgba(92,64,51,.1);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .contact-section h2 {
+      font-size: 1.9rem; font-weight: 500; font-style: italic;
+      color: var(--navy); margin-bottom: .75rem;
+    }
+    .contact-section p { color: var(--muted); max-width: 480px; margin: 0 auto 1.75rem; }
+    .contact-btn {
+      display: inline-block;
+      background: var(--navy); color: #fff;
+      padding: .75rem 2rem; border-radius: 12px;
+      text-decoration: none; font-size: 1rem; font-weight: 500;
+      letter-spacing: .02em;
+      transition: background .2s;
+    }
+    .contact-btn:hover { background: #243761; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid rgba(92,64,51,.15);
+      padding: 2rem;
+      text-align: center;
+      font-size: .95rem; color: var(--muted);
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: .75rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="../">Catechism</a>
+  <a class="nav-link" href="../">← Back</a>
+</nav>
+
+<section class="hero">
+  <h1>Support</h1>
+  <p>Answers to common questions, and a way to reach us directly.</p>
+</section>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>How does the mastery system work?</summary>
+    <div class="faq-body">
+      Each question progresses through three mastery levels: <strong>flashcard</strong> (read the answer), <strong>multiple choice</strong> (choose from options), and <strong>written</strong> (type the answer from memory). You must answer correctly three times at the written level to fully master a question. A lesson is marked complete only when all its questions are fully mastered.
+    </div>
+  </details>
+
+  <details>
+    <summary>What is the Review tab for?</summary>
+    <div class="faq-body">
+      The Review tab uses spaced repetition (the SM-2 algorithm) to resurface questions you've already encountered in lessons. Questions appear at increasing intervals — answering correctly pushes the next review further out; answering incorrectly brings it back sooner. Only questions you've previously attempted in a lesson session will appear here.
+    </div>
+  </details>
+
+  <details>
+    <summary>Does the app work offline?</summary>
+    <div class="faq-body">
+      Yes — all content and your progress are stored on-device. No internet connection is required after the initial app download. Sign in with Apple is optional; if you skip it, your data remains local only.
+    </div>
+  </details>
+
+  <details>
+    <summary>What is Sign in with Apple used for?</summary>
+    <div class="faq-body">
+      Sign in with Apple is entirely optional. It creates a simple account identifier on your device that can be used for future cloud sync features. If you sign in, no personal data is sent to any external server.
+    </div>
+  </details>
+
+  <details>
+    <summary>Can I reset my progress?</summary>
+    <div class="faq-body">
+      Yes. Go to <strong>Profile → Settings → Reset Progress</strong>. This clears all mastery levels and review history. The action cannot be undone, so a confirmation prompt will appear before anything is deleted.
+    </div>
+  </details>
+
+  <details>
+    <summary>What is Parent Mode?</summary>
+    <div class="faq-body">
+      Parent Mode is a biometric-protected area where you can quiz your children and track their progress separately from your own. Access it from the Profile tab. You'll need Face ID or Touch ID to enter and exit.
+    </div>
+  </details>
+
+  <details>
+    <summary>Which edition of the Catechism is used?</summary>
+    <div class="faq-body">
+      The app covers all three numbered editions of the Baltimore Catechism (No. 1, No. 2, and No. 3) plus a Prayers course. Psalm citations follow the Douay-Rheims (Vulgate) numbering. Explanations and notes are sourced from primary texts: Scripture, the Church Fathers, the Roman Catechism, and St. Thomas Aquinas.
+    </div>
+  </details>
+
+  <details>
+    <summary>The app isn't syncing between my devices. Why?</summary>
+    <div class="faq-body">
+      Cross-device sync is not available in the current version — all data is stored locally on the device you use. If you reinstall the app or switch devices, progress will start fresh. We plan to add iCloud sync in a future update.
+    </div>
+  </details>
+
+  <details>
+    <summary>I found a content error. How do I report it?</summary>
+    <div class="faq-body">
+      Please email us at <a href="mailto:wilmernilsson@gmail.com">wilmernilsson@gmail.com</a> with the lesson name, question, and a description of the error. We take accuracy seriously and will review every report promptly.
+    </div>
+  </details>
+
+</section>
+
+<section class="contact-section">
+  <h2>Still need help?</h2>
+  <p>
+    Send us an email and we'll get back to you as quickly as possible.
+  </p>
+  <a class="contact-btn" href="mailto:wilmernilsson@gmail.com">
+    wilmernilsson@gmail.com
+  </a>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="../">Home</a>
+    <a href="mailto:wilmernilsson@gmail.com">Contact</a>
+  </div>
+  <p>&copy; 2026 Wilmer Nilsson. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
